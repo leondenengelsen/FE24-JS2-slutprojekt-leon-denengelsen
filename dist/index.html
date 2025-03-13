@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRUM BOARD LEON DEN ENGELSEN</title>
+    <link rel="stylesheet" href="/index.c92073ef.css">
+    <script src="/index.b7a05eb9.js" defer=""></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>SCRUM BOARD</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="scrum-board">
+            <div id="to-do" class="to-do">
+                <h2>To Do</h2>
+                <ul id="todo-list"></ul>
+                <button class="assign-btn">Assign To</button>
+                <div id="assign-menu">
+                    <ul id="assign-members-list"></ul>
+                </div>
+            </div>
+
+            <div id="ongoing" class="ongoing">
+                <h2>Ongoing</h2>
+                <ul id="ongoing-list"></ul>
+                <button class="done-btn">Done</button>
+            </div>
+
+            <div id="done" class="done">
+                <h2>Done</h2>
+                <ul id="done-list"></ul>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+
+        <div class="scrum-controls">
+            <label for="sort-tasks">Sort: </label>
+            <select id="sort-tasks">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+
+            <label for="filter-by-category">Filter Category:</label>
+            <select id="filter-by-category">
+                <option value="all">All</option>
+            </select>
+
+            <label for="filter-members">Filter Members:</label>
+            <select id="filter-members">
+                <option value="all">All Members</option>
+            </select>
+
+            <button id="apply-filters" class="apply-filters">Apply Filters</button>
+        </div>
+
+        <!-- FORM SECTION -->
+        <div class="form-div">
+
+            <form id="input-form">
+                <div class="input-fields">
+                    <label for="member-name">Add member:</label>
+                    <input type="text" id="member-name" name="member-name">
+
+                    <div class="dropdown" id="role-dropdown">
+                        <div class="dropdown-button">Select Roles</div>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" name="role" value="frontend"> Front end</label>
+                            <label><input type="checkbox" name="role" value="backend"> Back end</label>
+                            <label><input type="checkbox" name="role" value="ux"> UX</label>
+                            <label><input type="checkbox" name="role" value="manager"> Manager</label>
+                            <label><input type="checkbox" name="role" value="testing"> Testing</label>
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <label for="task-name">Add task:</label>
+                    <input type="text" id="task-name" name="task-name">
+
+
+
+                    <div class="dropdown" id="category-dropdown">
+                        <div class="dropdown-button">Select Roles</div>
+                        <div class="dropdown-content">
+                            <label><input type="radio" name="category" value="frontend"> Front end</label>
+                            <label><input type="radio" name="category" value="backend"> Back end</label>
+                            <label><input type="radio" name="category" value="ux"> UX</label>
+                            <label><input type="radio" name="category" value="manager"> Manager</label>
+                            <label><input type="radio" name="category" value="testing"> Testing</label>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <label for="task-desc">Description:</label>
+                    <input type="text" id="task-desc" name="task-desc">
+
+                    <br><br>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <h3>Members</h3>
+        <ul id="members-list"></ul>
+
+        <div class="options">
+            <button id="options-btn">Options</button>
+
+            <!-- Hidden options menu -->
+            <div id="options-menu" ;"="">
+                <button id="clear-database">Reset Scrumboard</button>
+                <button id="delete-members">Delete a Member - WORK IN PROGRESS</button>
+                <button id="edit-categories">Edit Categories - WORK IN PROGRESS</button>
+
+            </div>
+        </div>
+
+        <!-- MS-DOS Style Log -->
+        <div id="log-container">
+            <div id="log"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
